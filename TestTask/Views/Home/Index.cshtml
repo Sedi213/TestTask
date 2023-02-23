@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model TestTask.Models.ModelVm;
+<div class="text-center">
+
+    <h1>"Folder" - @Model.Name</h1>
+    <br />
+    @foreach (var data in Model.Folders)
+    {
+        <a href="/@data.id">@data.name</a>
+        <br />
+    }
+
+</div>
+
+<div style="border: 2px solid black"></div>
+<div>
+    <a href="/Home/DefaultTable">Load Default table</a>
+    <br />
+    <a href="/Home/AddSystemDirInDb">Load System table</a>
+    <br />
+    <a href="/Home/ReadFile">Read file table</a>
+    <br />
+    <a href="/Home/CreateFile">Write file table</a>
+</div>
